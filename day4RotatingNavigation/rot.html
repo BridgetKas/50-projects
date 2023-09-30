@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="rot.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <title>Rotating Navigation</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+      <div class="content">
+        <h1>Amazing Article</h1>
+        <small>Florin Pop</small>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          fuga non similique at quis, maiores magnam, nemo necessitatibus cum,
+          atque quidem? Laborum ea iste exercitationem ipsum sint repellat
+          aperiam velit.
+        </p>
+        <h3>My Dog</h3>
+        <img
+          src="https://images.unsplash.com/photo-1551009175-8a68da93d5f9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80"
+          alt="lama"
+        />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime,
+          beatae architecto ex sequi totam iste veniam. Vitae mollitia quae
+          nobis quo laudantium ex, a repellendus illo quia reiciendis ipsa
+          asperiores, expedita architecto beatae eum ullam neque. Fuga ipsum
+          exercitationem harum sequi ducimus ullam necessitatibus, accusamus
+          alias. Similique, dolorum fugit sed quod autem, reprehenderit
+          molestiae, optio nihil rerum minus iusto quia? Neque dolore
+          repudiandae eaque perferendis quia magni cupiditate vitae placeat
+          reiciendis doloribus beatae, cumque voluptates.
+        </p>
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><i class="fas fa-home"></i>Home</li>
+        <li><i class="fas fa-user-alt"></i>About</li>
+        <li><i class="fas fa-envelope"></i>Contact</li>
+      </ul>
+    </nav>
+    <!-- <script src="rot.js"></script> -->
+
+    <script>
+      const open = document.getElementById("open");
+      const close = document.getElementById("close");
+      const container = document.querySelector(".container");
+
+      open.addEventListener("click", () => container.classList.add("show-nav"));
+
+      close.addEventListener("click", () =>
+        container.classList.remove("show-nav")
+      );
+    </script>
+  </body>
+</html>
