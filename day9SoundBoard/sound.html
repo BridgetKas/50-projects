@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="sound.css" />
+    <title>Sound Board</title>
+  </head>
+  <body>
+    <audio id="applause" src="assets/applause.wav"></audio>
+    <audio id="boo" src="assets/boo.wav"></audio>
+    <audio id="gasp" src="assets/gasp.wav"></audio>
+    <audio id="tada" src="assets/tada.wav"></audio>
+    <audio id="victory" src="assets/victory.wav"></audio>
+    <audio id="wrong" src="assets/wrong.wav"></audio>
+
+    <div id="buttons"></div>
+    <script>
+      const sounds = ["applause", "boo", "gasp", "tada", "victory", "wrong"];
+
+      sounds.forEach((sound) => {
+        const btn = document.createElement("button");
+        btn.classList.add("btn");
+
+        btn.innerText = sound;
+        btn.addEventListener("click", () => {
+          stopSongs();
+          document.getElementById(sound).play();
+        });
+
+        document.getElementById("buttons").appendChild(btn);
+      });
+
+      function stopSongs() {
+        sounds.forEach((sound) => {
+          const song = document.getElementById(sound);
+          song.pause();
+          song.currentTime = 0;
+        });
+      }
+    </script>
+  </body>
+</html>
