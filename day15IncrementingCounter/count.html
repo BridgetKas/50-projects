@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9W0XpSriVlkMXe40PTKnXrLnZ9+fkDaog=="
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="count.css" />
+    <title>Increment Counter</title>
+  </head>
+  <body>
+    <div class="counter-container">
+      <ion-icon name="logo-twitter" class="ion fab fa-twitter fa-3x"></ion-icon>
+      <div class="counter" data-target="12000"></div>
+      <span>Twitter followers</span>
+    </div>
+    <div class="counter-container">
+      <ion-icon name="logo-youtube" class="ion fab fa-youtube fa-3x"></ion-icon>
+      <div class="counter" data-target="5000"></div>
+      <span>YouTube Subscribes</span>
+    </div>
+    <div class="counter-container">
+      <ion-icon
+        name="logo-facebook"
+        class="ion fab fa-facebook fa-3x"
+      ></ion-icon>
+      <div class="counter" data-target="7500"></div>
+      <span>Facebook Fans</span>
+    </div>
+    <script src="count.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
